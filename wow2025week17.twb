@@ -1,0 +1,1898 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Sort Measure' datatype='string' name='[参数 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Points&quot;'>
+        <calculation class='tableau' formula='&quot;Points&quot;' />
+        <members>
+          <member value='&quot;Points&quot;' />
+          <member value='&quot;Goal Difference&quot;' />
+          <member value='&quot;Goals Scored&quot;' />
+          <member value='&quot;Goals Conceded&quot;' />
+        </members>
+      </column>
+      <column caption='Select Team' datatype='string' name='[参数 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Arsenal&quot;'>
+        <calculation class='tableau' formula='&quot;Arsenal&quot;' />
+        <members>
+          <member value='&quot;Arsenal&quot;' />
+          <member value='&quot;Aston Villa&quot;' />
+          <member value='&quot;Barnsley&quot;' />
+          <member value='&quot;Birmingham City&quot;' />
+          <member value='&quot;Blackburn&quot;' />
+          <member value='&quot;Blackpool&quot;' />
+          <member value='&quot;Bolton&quot;' />
+          <member value='&quot;Bournemouth&quot;' />
+          <member value='&quot;Bradford City&quot;' />
+          <member value='&quot;Brentford&quot;' />
+          <member value='&quot;Brighton&quot;' />
+          <member value='&quot;Burnley&quot;' />
+          <member value='&quot;Cardiff City&quot;' />
+          <member value='&quot;Charlton Ath&quot;' />
+          <member value='&quot;Chelsea&quot;' />
+          <member value='&quot;Coventry City&quot;' />
+          <member value='&quot;Crystal Palace&quot;' />
+          <member value='&quot;Derby County&quot;' />
+          <member value='&quot;Everton&quot;' />
+          <member value='&quot;Fulham&quot;' />
+          <member value='&quot;Huddersfield&quot;' />
+          <member value='&quot;Hull City&quot;' />
+          <member value='&quot;Ipswich Town&quot;' />
+          <member value='&quot;Leeds United&quot;' />
+          <member value='&quot;Leicester City&quot;' />
+          <member value='&quot;Liverpool&quot;' />
+          <member value='&quot;Luton Town&quot;' />
+          <member value='&quot;Manchester City&quot;' />
+          <member value='&quot;Manchester Utd&quot;' />
+          <member value='&quot;Middlesbrough&quot;' />
+          <member value='&quot;Newcastle Utd&quot;' />
+          <member value='&quot;Norwich City&quot;' />
+          <member value='&quot;Nott&apos;ham Forest&quot;' />
+          <member value='&quot;Oldham Athletic&quot;' />
+          <member value='&quot;Portsmouth&quot;' />
+          <member value='&quot;QPR&quot;' />
+          <member value='&quot;Reading&quot;' />
+          <member value='&quot;Sheffield Utd&quot;' />
+          <member value='&quot;Sheffield Weds&quot;' />
+          <member value='&quot;Southampton&quot;' />
+          <member value='&quot;Stoke City&quot;' />
+          <member value='&quot;Sunderland&quot;' />
+          <member value='&quot;Swansea City&quot;' />
+          <member value='&quot;Swindon Town&quot;' />
+          <member value='&quot;Tottenham&quot;' />
+          <member value='&quot;Watford&quot;' />
+          <member value='&quot;West Brom&quot;' />
+          <member value='&quot;West Ham&quot;' />
+          <member value='&quot;Wigan Athletic&quot;' />
+          <member value='&quot;Wimbledon&quot;' />
+          <member value='&quot;Wolves&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='EPL Stats' inline='true' name='federated.1scre4e004awue16oxv8w12pscjl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='EPL Stats' name='textscan.1d9kp7u1yrago11dy07fz1gicfru'>
+            <connection class='textscan' directory='/Users/smuch/Documents/repositories/wow/data_sets' filename='EPL Stats.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1d9kp7u1yrago11dy07fz1gicfru' name='EPL Stats.csv' table='[EPL Stats#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+            <column datatype='string' name='Team' ordinal='0' />
+            <column datatype='string' name='Season' ordinal='1' />
+            <column datatype='integer' name='Season End Year' ordinal='2' />
+            <column datatype='integer' name='Points' ordinal='3' />
+            <column datatype='integer' name='Cumulative Points' ordinal='4' />
+            <column datatype='integer' name='Goals For' ordinal='5' />
+            <column datatype='integer' name='Cumulative Goals For' ordinal='6' />
+            <column datatype='integer' name='Goals Against' ordinal='7' />
+            <column datatype='integer' name='Cumulative Goals Against' ordinal='8' />
+            <column datatype='integer' name='Goal Difference' ordinal='9' />
+            <column datatype='integer' name='Cumulative Goal Difference' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¥&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Team]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Team</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Season]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Season</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season End Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Season End Year]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Season End Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Points</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Points]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Points</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cumulative Points</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative Points]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Cumulative Points</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Goals For</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Goals For]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Goals For</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cumulative Goals For</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative Goals For]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Cumulative Goals For</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Goals Against</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Goals Against]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Goals Against</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cumulative Goals Against</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative Goals Against]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Cumulative Goals Against</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Goal Difference</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Goal Difference]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Goal Difference</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cumulative Goal Difference</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative Goal Difference]</local-name>
+            <parent-name>[EPL Stats.csv]</parent-name>
+            <remote-alias>Cumulative Goal Difference</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='hidden records' datatype='boolean' name='[Calculation_1426726290596327424]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='SUM([Points]) &gt; 0' />
+      </column>
+      <column caption='target' datatype='integer' name='[Calculation_1426726290597195778]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[参数 1]&#10;WHEN &apos;Points&apos; THEN [Points]&#10;WHEN &apos;Goal Difference&apos; THEN [Goal Difference]&#10;WHEN &apos;Goals Scored&apos; THEN [Goals For]&#10;WHEN &apos;Goals Conceded&apos; THEN [Goals Against]&#10;ELSE 0&#10;END' />
+      </column>
+      <column caption='sort order' datatype='integer' name='[Calculation_1426726290598096899]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[参数 1] = &apos;Goals Conceded&apos; THEN -[Calculation_1426726290597195778] ELSE [Calculation_1426726290597195778] END' />
+      </column>
+      <column caption='highlight' datatype='boolean' name='[Calculation_1426726290599546885]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Team] = [Parameters].[参数 2]' />
+      </column>
+      <column caption='Label to display' datatype='integer' name='[Calculation_1426726290605121545]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF MIN([Calculation_1426726290599546885]) OR FIRST()=0 THEN SUM([Calculation_1426726290597195778]) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Limit measure' datatype='integer' name='[Calculation_1426726290608074764]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='window_max(sum([Calculation_1426726290597195778]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='max diff' datatype='integer' name='[Calculation_1426726290608427022]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='-[Calculation_1426726290608074764] + sum([Calculation_1426726290597195778])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Season End Year]' role='dimension' type='ordinal' />
+      <column caption='EPL Stats.csv' datatype='table' name='[__tableau_internal_object_id__].[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1426726290599546885]' derivation='None' name='[none:Calculation_1426726290599546885:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='zh_CN' class='hyper' dbname='/Users/smuch/Documents/My Tableau Repository/Datasources/EPL Stats.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/23/2025 01:26:42 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='EPL Stats' increment-value='%null%' refresh-type='create' rows-inserted='1632' timestamp-start='2025-04-23 13:26:41.963' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Team</remote-alias>
+              <ordinal>0</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LZH_RCN' />
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Season</remote-alias>
+              <ordinal>1</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LZH_RCN' />
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Season End Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Season End Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Season End Year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Points</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Points]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Points</remote-alias>
+              <ordinal>3</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>80</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cumulative Points</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cumulative Points]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cumulative Points</remote-alias>
+              <ordinal>4</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>423</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Goals For</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Goals For]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Goals For</remote-alias>
+              <ordinal>5</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cumulative Goals For</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cumulative Goals For]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cumulative Goals For</remote-alias>
+              <ordinal>6</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>442</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Goals Against</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Goals Against]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Goals Against</remote-alias>
+              <ordinal>7</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>65</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cumulative Goals Against</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cumulative Goals Against]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cumulative Goals Against</remote-alias>
+              <ordinal>8</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>420</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Goal Difference</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Goal Difference]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Goal Difference</remote-alias>
+              <ordinal>9</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>111</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cumulative Goal Difference</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cumulative Goal Difference]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cumulative Goal Difference</remote-alias>
+              <ordinal>10</ordinal>
+              <family>EPL Stats.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>331</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.674804' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.325196' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_1426726290599546885:nk]' type='palette'>
+            <map to='#3e1756'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#ac92aa'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;中国&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Sort Measure' datatype='string' name='[参数 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Points&quot;'>
+          <calculation class='tableau' formula='&quot;Points&quot;' />
+        </column>
+        <column caption='Select Team' datatype='string' name='[参数 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Arsenal&quot;'>
+          <calculation class='tableau' formula='&quot;Arsenal&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='EPL Stats.csv' id='EPL Stats.csv_3ADA37C37A5A4093B19617FCD44D54CB'>
+            <properties context=''>
+              <relation connection='textscan.1d9kp7u1yrago11dy07fz1gicfru' name='EPL Stats.csv' table='[EPL Stats#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                  <column datatype='string' name='Team' ordinal='0' />
+                  <column datatype='string' name='Season' ordinal='1' />
+                  <column datatype='integer' name='Season End Year' ordinal='2' />
+                  <column datatype='integer' name='Points' ordinal='3' />
+                  <column datatype='integer' name='Cumulative Points' ordinal='4' />
+                  <column datatype='integer' name='Goals For' ordinal='5' />
+                  <column datatype='integer' name='Cumulative Goals For' ordinal='6' />
+                  <column datatype='integer' name='Goals Against' ordinal='7' />
+                  <column datatype='integer' name='Cumulative Goals Against' ordinal='8' />
+                  <column datatype='integer' name='Goal Difference' ordinal='9' />
+                  <column datatype='integer' name='Cumulative Goal Difference' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='sheet'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EPL Stats' name='federated.1scre4e004awue16oxv8w12pscjl' />
+            <datasource caption='参数' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Sort Measure' datatype='string' name='[参数 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Points&quot;'>
+              <calculation class='tableau' formula='&quot;Points&quot;' />
+            </column>
+            <column caption='Select Team' datatype='string' name='[参数 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Arsenal&quot;'>
+              <calculation class='tableau' formula='&quot;Arsenal&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1scre4e004awue16oxv8w12pscjl'>
+            <column caption='hidden records' datatype='boolean' name='[Calculation_1426726290596327424]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='SUM([Points]) &gt; 0' />
+            </column>
+            <column caption='target' datatype='integer' name='[Calculation_1426726290597195778]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[参数 1]&#10;WHEN &apos;Points&apos; THEN [Points]&#10;WHEN &apos;Goal Difference&apos; THEN [Goal Difference]&#10;WHEN &apos;Goals Scored&apos; THEN [Goals For]&#10;WHEN &apos;Goals Conceded&apos; THEN [Goals Against]&#10;ELSE 0&#10;END' />
+            </column>
+            <column caption='sort order' datatype='integer' name='[Calculation_1426726290598096899]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[参数 1] = &apos;Goals Conceded&apos; THEN -[Calculation_1426726290597195778] ELSE [Calculation_1426726290597195778] END' />
+            </column>
+            <column caption='highlight' datatype='boolean' name='[Calculation_1426726290599546885]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Team] = [Parameters].[参数 2]' />
+            </column>
+            <column caption='Label to display' datatype='integer' name='[Calculation_1426726290605121545]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF MIN([Calculation_1426726290599546885]) OR FIRST()=0 THEN SUM([Calculation_1426726290597195778]) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Goal Difference]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Goals Against]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Goals For]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Points]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Season End Year]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Team]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1426726290599546885]' derivation='None' name='[none:Calculation_1426726290599546885:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season End Year]' derivation='None' name='[none:Season End Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Team]' derivation='None' name='[none:Team:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1426726290597195778]' derivation='Sum' name='[sum:Calculation_1426726290597195778:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1426726290598096899]' derivation='Sum' name='[sum:Calculation_1426726290598096899:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1426726290596327424]' derivation='User' name='[usr:Calculation_1426726290596327424:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1426726290605121545]' derivation='User' name='[usr:Calculation_1426726290605121545:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]'>
+            <groupfilter function='member' level='[none:Season End Year:ok]' member='1993' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]' direction='DESC' using='[federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290598096899:qk]' />
+          <filter class='categorical' column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290596327424:nk]'>
+            <groupfilter function='member' level='[usr:Calculation_1426726290596327424:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]</column>
+            <column>[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290596327424:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290597195778:qk]' scope='cols' value='false' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]' value='38' />
+            <format attr='border-color' scope='rows' value='#000000' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]' value='132' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#e6e6e6' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='div-level' scope='rows' value='1' />
+            <format attr='stroke-color' scope='rows' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1scre4e004awue16oxv8w12pscjl].[none:Calculation_1426726290599546885:nk]' />
+              <text column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290605121545:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1534254550933838' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]</rows>
+        <cols>[federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290597195778:qk]</cols>
+      </table>
+      <simple-id uuid='{15B506E2-DFEA-4BA3-B35A-53285639AF0A}' />
+    </worksheet>
+    <worksheet name='sheet (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EPL Stats' name='federated.1scre4e004awue16oxv8w12pscjl' />
+            <datasource caption='参数' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Sort Measure' datatype='string' name='[参数 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Points&quot;'>
+              <calculation class='tableau' formula='&quot;Points&quot;' />
+            </column>
+            <column caption='Select Team' datatype='string' name='[参数 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Arsenal&quot;'>
+              <calculation class='tableau' formula='&quot;Arsenal&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1scre4e004awue16oxv8w12pscjl'>
+            <column caption='hidden records' datatype='boolean' name='[Calculation_1426726290596327424]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='SUM([Points]) &gt; 0' />
+            </column>
+            <column caption='target' datatype='integer' name='[Calculation_1426726290597195778]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[参数 1]&#10;WHEN &apos;Points&apos; THEN [Points]&#10;WHEN &apos;Goal Difference&apos; THEN [Goal Difference]&#10;WHEN &apos;Goals Scored&apos; THEN [Goals For]&#10;WHEN &apos;Goals Conceded&apos; THEN [Goals Against]&#10;ELSE 0&#10;END' />
+            </column>
+            <column caption='sort order' datatype='integer' name='[Calculation_1426726290598096899]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[参数 1] = &apos;Goals Conceded&apos; THEN -[Calculation_1426726290597195778] ELSE [Calculation_1426726290597195778] END' />
+            </column>
+            <column caption='highlight' datatype='boolean' name='[Calculation_1426726290599546885]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Team] = [Parameters].[参数 2]' />
+            </column>
+            <column caption='Label to display' datatype='integer' name='[Calculation_1426726290605121545]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF MIN([Calculation_1426726290599546885]) OR FIRST()=0 THEN SUM([Calculation_1426726290597195778]) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Limit measure' datatype='integer' name='[Calculation_1426726290608074764]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='window_max(sum([Calculation_1426726290597195778]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='max diff' datatype='integer' name='[Calculation_1426726290608427022]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='-[Calculation_1426726290608074764] + sum([Calculation_1426726290597195778])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Goal Difference]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Goals Against]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Goals For]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Points]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Season End Year]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Team]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1426726290599546885]' derivation='None' name='[none:Calculation_1426726290599546885:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season End Year]' derivation='None' name='[none:Season End Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Team]' derivation='None' name='[none:Team:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1426726290597195778]' derivation='Sum' name='[sum:Calculation_1426726290597195778:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1426726290598096899]' derivation='Sum' name='[sum:Calculation_1426726290598096899:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1426726290596327424]' derivation='User' name='[usr:Calculation_1426726290596327424:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1426726290605121545]' derivation='User' name='[usr:Calculation_1426726290605121545:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_1426726290608074764]' derivation='User' name='[usr:Calculation_1426726290608074764:qk:5]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1scre4e004awue16oxv8w12pscjl].[Team]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_1426726290608427022]' derivation='User' name='[usr:Calculation_1426726290608427022:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.1scre4e004awue16oxv8w12pscjl].[Calculation_1426726290608074764]' ordering-field='[federated.1scre4e004awue16oxv8w12pscjl].[Team]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]'>
+            <groupfilter function='member' level='[none:Season End Year:ok]' member='1993' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]' direction='DESC' using='[federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290598096899:qk]' />
+          <filter class='categorical' column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290596327424:nk]'>
+            <groupfilter function='member' level='[usr:Calculation_1426726290596327424:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]</column>
+            <column>[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290596327424:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290597195778:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290608074764:qk:5]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290608074764:qk:5]' scope='cols' value='false' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]' value='38' />
+            <format attr='border-color' scope='rows' value='#000000' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]' value='132' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#e6e6e6' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='div-level' scope='rows' value='1' />
+            <format attr='stroke-color' scope='rows' value='#d4d4d4' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290605121545:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1534254550933838' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290597195778:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1scre4e004awue16oxv8w12pscjl].[none:Calculation_1426726290599546885:nk]' />
+              <text column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290605121545:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1534254550933838' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290608074764:qk:5]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <size column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290608427022:qk:2]' />
+              <text column='[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290605121545:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.10895027965307236' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='91' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]</rows>
+        <cols>([federated.1scre4e004awue16oxv8w12pscjl].[sum:Calculation_1426726290597195778:qk] + [federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290608074764:qk:5])</cols>
+      </table>
+      <simple-id uuid='{D2CF8BAD-5820-4E98-979B-CAED2C1589AF}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='wow-2025-week-17'>
+      <style />
+      <size maxheight='1000' maxwidth='1000' minheight='1000' minwidth='1000' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='参数' name='Parameters' />
+        <datasource caption='EPL Stats' name='federated.1scre4e004awue16oxv8w12pscjl' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Sort Measure' datatype='string' name='[参数 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Points&quot;'>
+          <calculation class='tableau' formula='&quot;Points&quot;' />
+          <members>
+            <member value='&quot;Points&quot;' />
+            <member value='&quot;Goal Difference&quot;' />
+            <member value='&quot;Goals Scored&quot;' />
+            <member value='&quot;Goals Conceded&quot;' />
+          </members>
+        </column>
+        <column caption='Select Team' datatype='string' name='[参数 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Arsenal&quot;'>
+          <calculation class='tableau' formula='&quot;Arsenal&quot;' />
+          <members>
+            <member value='&quot;Arsenal&quot;' />
+            <member value='&quot;Aston Villa&quot;' />
+            <member value='&quot;Barnsley&quot;' />
+            <member value='&quot;Birmingham City&quot;' />
+            <member value='&quot;Blackburn&quot;' />
+            <member value='&quot;Blackpool&quot;' />
+            <member value='&quot;Bolton&quot;' />
+            <member value='&quot;Bournemouth&quot;' />
+            <member value='&quot;Bradford City&quot;' />
+            <member value='&quot;Brentford&quot;' />
+            <member value='&quot;Brighton&quot;' />
+            <member value='&quot;Burnley&quot;' />
+            <member value='&quot;Cardiff City&quot;' />
+            <member value='&quot;Charlton Ath&quot;' />
+            <member value='&quot;Chelsea&quot;' />
+            <member value='&quot;Coventry City&quot;' />
+            <member value='&quot;Crystal Palace&quot;' />
+            <member value='&quot;Derby County&quot;' />
+            <member value='&quot;Everton&quot;' />
+            <member value='&quot;Fulham&quot;' />
+            <member value='&quot;Huddersfield&quot;' />
+            <member value='&quot;Hull City&quot;' />
+            <member value='&quot;Ipswich Town&quot;' />
+            <member value='&quot;Leeds United&quot;' />
+            <member value='&quot;Leicester City&quot;' />
+            <member value='&quot;Liverpool&quot;' />
+            <member value='&quot;Luton Town&quot;' />
+            <member value='&quot;Manchester City&quot;' />
+            <member value='&quot;Manchester Utd&quot;' />
+            <member value='&quot;Middlesbrough&quot;' />
+            <member value='&quot;Newcastle Utd&quot;' />
+            <member value='&quot;Norwich City&quot;' />
+            <member value='&quot;Nott&apos;ham Forest&quot;' />
+            <member value='&quot;Oldham Athletic&quot;' />
+            <member value='&quot;Portsmouth&quot;' />
+            <member value='&quot;QPR&quot;' />
+            <member value='&quot;Reading&quot;' />
+            <member value='&quot;Sheffield Utd&quot;' />
+            <member value='&quot;Sheffield Weds&quot;' />
+            <member value='&quot;Southampton&quot;' />
+            <member value='&quot;Stoke City&quot;' />
+            <member value='&quot;Sunderland&quot;' />
+            <member value='&quot;Swansea City&quot;' />
+            <member value='&quot;Swindon Town&quot;' />
+            <member value='&quot;Tottenham&quot;' />
+            <member value='&quot;Watford&quot;' />
+            <member value='&quot;West Brom&quot;' />
+            <member value='&quot;West Ham&quot;' />
+            <member value='&quot;Wigan Athletic&quot;' />
+            <member value='&quot;Wimbledon&quot;' />
+            <member value='&quot;Wolves&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1scre4e004awue16oxv8w12pscjl'>
+        <column aggregation='Sum' datatype='integer' name='[Season End Year]' role='dimension' type='ordinal' />
+        <column-instance column='[Season End Year]' derivation='None' name='[none:Season End Year:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94900' id='9' param='horz' type-v2='layout-flow' w='98400' x='800' y='800'>
+            <zone h='94900' id='7' type-v2='layout-basic' w='98400' x='800' y='800'>
+              <zone h='9934' id='3' type-v2='text' w='98400' x='800' y='800'>
+                <formatted-text>
+                  <run fontcolor='#35003d' fontsize='15'>Is </run>
+                  <run bold='true' fontcolor='#35003d' fontsize='15'>&lt;[Parameters].[参数 2]&gt; </run>
+                  <run fontcolor='#35003d' fontsize='15'>the greatest EPL team of all time?</run>
+                  <run>Æ&#10;</run>
+                  <run fontcolor='#35003d'>Select a </run>
+                  <run bold='true' fontcolor='#35003d'>team</run>
+                  <run fontcolor='#35003d'> and a</run>
+                  <run bold='true' fontcolor='#35003d'> measure of performance</run>
+                  <run fontcolor='#35003d'> and scroll through each </run>
+                  <run bold='true' fontcolor='#35003d'>season</run>
+                  <run fontcolor='#35003d'> to see how that team has performed cumulatively over the lifetime of the EPL compared to other teams. </run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='84966' id='5' param='horz' type-v2='layout-flow' w='98400' x='800' y='10734'>
+                <zone h='84966' id='6' name='sheet' show-title='false' w='82200' x='800' y='10734'>
+                  <layout-cache minwidth='233' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#f3ebf3' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='162' h='84966' id='8' is-fixed='true' param='vert' type-v2='layout-flow' w='16200' x='83000' y='10734'>
+                  <zone h='5200' id='12' mode='compact' param='[Parameters].[参数 2]' type-v2='paramctrl' w='16200' x='83000' y='10734'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='5200' id='11' mode='compact' param='[Parameters].[参数 1]' type-v2='paramctrl' w='16200' x='83000' y='15934'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='7500' id='10' mode='slider' name='sheet' param='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]' show-all='false' type-v2='filter' w='16200' x='83000' y='21134'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='3500' id='14' type-v2='text' w='34600' x='800' y='95700'>
+            <formatted-text>
+              <run bold='true' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='11'>CHALLENGE BY: Smuch</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='3500' id='15' type-v2='text' w='37200' x='35400' y='95700'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>#WOW2025  |  WEEK 17</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='3500' id='16' type-v2='text' w='26600' x='72600' y='95700'>
+            <formatted-text>
+              <run bold='true' fontalignment='2' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>DATA: Kaggle.com</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f3ebf3' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='31' param='vert' type-v2='layout-flow' w='98400' x='800' y='800'>
+                <zone h='9934' id='3' type-v2='text' w='98400' x='800' y='800'>
+                  <formatted-text>
+                    <run fontcolor='#35003d' fontsize='15'>Is </run>
+                    <run bold='true' fontcolor='#35003d' fontsize='15'>&lt;[Parameters].[参数 2]&gt; </run>
+                    <run fontcolor='#35003d' fontsize='15'>the greatest EPL team of all time?</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#35003d'>Select a </run>
+                    <run bold='true' fontcolor='#35003d'>team</run>
+                    <run fontcolor='#35003d'> and a</run>
+                    <run bold='true' fontcolor='#35003d'> measure of performance</run>
+                    <run fontcolor='#35003d'> and scroll through each </run>
+                    <run bold='true' fontcolor='#35003d'>season</run>
+                    <run fontcolor='#35003d'> to see how that team has performed cumulatively over the lifetime of the EPL compared to other teams. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7500' id='10' mode='slider' name='sheet' param='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]' show-all='false' type-v2='filter' w='16200' x='83000' y='21134'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='84966' id='6' is-fixed='true' name='sheet' show-title='false' w='82200' x='800' y='10734'>
+                  <layout-cache minwidth='233' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f3ebf3' />
+                  </zone-style>
+                </zone>
+                <zone h='5200' id='12' mode='compact' param='[Parameters].[参数 2]' type-v2='paramctrl' w='16200' x='83000' y='10734'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5200' id='11' mode='compact' param='[Parameters].[参数 1]' type-v2='paramctrl' w='16200' x='83000' y='15934'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3500' id='14' type-v2='text' w='34600' x='800' y='95700'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='11'>CHALLENGE BY: Smuch</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3500' id='15' type-v2='text' w='37200' x='35400' y='95700'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>#WOW2025  |  WEEK 17</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3500' id='16' type-v2='text' w='26600' x='72600' y='95700'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='2' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>DATA: Kaggle.com</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f3ebf3' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{04C94844-7F60-4AE6-A78C-28E69E711434}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='wow-2025-week-17 (Bouns)'>
+      <style />
+      <size maxheight='1000' maxwidth='1000' minheight='1000' minwidth='1000' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='参数' name='Parameters' />
+        <datasource caption='EPL Stats' name='federated.1scre4e004awue16oxv8w12pscjl' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Sort Measure' datatype='string' name='[参数 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Points&quot;'>
+          <calculation class='tableau' formula='&quot;Points&quot;' />
+          <members>
+            <member value='&quot;Points&quot;' />
+            <member value='&quot;Goal Difference&quot;' />
+            <member value='&quot;Goals Scored&quot;' />
+            <member value='&quot;Goals Conceded&quot;' />
+          </members>
+        </column>
+        <column caption='Select Team' datatype='string' name='[参数 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Arsenal&quot;'>
+          <calculation class='tableau' formula='&quot;Arsenal&quot;' />
+          <members>
+            <member value='&quot;Arsenal&quot;' />
+            <member value='&quot;Aston Villa&quot;' />
+            <member value='&quot;Barnsley&quot;' />
+            <member value='&quot;Birmingham City&quot;' />
+            <member value='&quot;Blackburn&quot;' />
+            <member value='&quot;Blackpool&quot;' />
+            <member value='&quot;Bolton&quot;' />
+            <member value='&quot;Bournemouth&quot;' />
+            <member value='&quot;Bradford City&quot;' />
+            <member value='&quot;Brentford&quot;' />
+            <member value='&quot;Brighton&quot;' />
+            <member value='&quot;Burnley&quot;' />
+            <member value='&quot;Cardiff City&quot;' />
+            <member value='&quot;Charlton Ath&quot;' />
+            <member value='&quot;Chelsea&quot;' />
+            <member value='&quot;Coventry City&quot;' />
+            <member value='&quot;Crystal Palace&quot;' />
+            <member value='&quot;Derby County&quot;' />
+            <member value='&quot;Everton&quot;' />
+            <member value='&quot;Fulham&quot;' />
+            <member value='&quot;Huddersfield&quot;' />
+            <member value='&quot;Hull City&quot;' />
+            <member value='&quot;Ipswich Town&quot;' />
+            <member value='&quot;Leeds United&quot;' />
+            <member value='&quot;Leicester City&quot;' />
+            <member value='&quot;Liverpool&quot;' />
+            <member value='&quot;Luton Town&quot;' />
+            <member value='&quot;Manchester City&quot;' />
+            <member value='&quot;Manchester Utd&quot;' />
+            <member value='&quot;Middlesbrough&quot;' />
+            <member value='&quot;Newcastle Utd&quot;' />
+            <member value='&quot;Norwich City&quot;' />
+            <member value='&quot;Nott&apos;ham Forest&quot;' />
+            <member value='&quot;Oldham Athletic&quot;' />
+            <member value='&quot;Portsmouth&quot;' />
+            <member value='&quot;QPR&quot;' />
+            <member value='&quot;Reading&quot;' />
+            <member value='&quot;Sheffield Utd&quot;' />
+            <member value='&quot;Sheffield Weds&quot;' />
+            <member value='&quot;Southampton&quot;' />
+            <member value='&quot;Stoke City&quot;' />
+            <member value='&quot;Sunderland&quot;' />
+            <member value='&quot;Swansea City&quot;' />
+            <member value='&quot;Swindon Town&quot;' />
+            <member value='&quot;Tottenham&quot;' />
+            <member value='&quot;Watford&quot;' />
+            <member value='&quot;West Brom&quot;' />
+            <member value='&quot;West Ham&quot;' />
+            <member value='&quot;Wigan Athletic&quot;' />
+            <member value='&quot;Wimbledon&quot;' />
+            <member value='&quot;Wolves&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1scre4e004awue16oxv8w12pscjl'>
+        <column aggregation='Sum' datatype='integer' name='[Season End Year]' role='dimension' type='ordinal' />
+        <column-instance column='[Season End Year]' derivation='None' name='[none:Season End Year:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94900' id='9' param='horz' type-v2='layout-flow' w='98400' x='800' y='800'>
+            <zone h='94900' id='7' type-v2='layout-basic' w='98400' x='800' y='800'>
+              <zone h='9934' id='3' type-v2='text' w='98400' x='800' y='800'>
+                <formatted-text>
+                  <run fontcolor='#35003d' fontsize='15'>Is </run>
+                  <run bold='true' fontcolor='#35003d' fontsize='15'>&lt;[Parameters].[参数 2]&gt; </run>
+                  <run fontcolor='#35003d' fontsize='15'>the greatest EPL team of all time?</run>
+                  <run>Æ&#10;</run>
+                  <run fontcolor='#35003d'>Select a </run>
+                  <run bold='true' fontcolor='#35003d'>team</run>
+                  <run fontcolor='#35003d'> and a</run>
+                  <run bold='true' fontcolor='#35003d'> measure of performance</run>
+                  <run fontcolor='#35003d'> and scroll through each </run>
+                  <run bold='true' fontcolor='#35003d'>season</run>
+                  <run fontcolor='#35003d'> to see how that team has performed cumulatively over the lifetime of the EPL compared to other teams. </run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='84966' id='5' param='horz' type-v2='layout-flow' w='98400' x='800' y='10734'>
+                <zone h='84966' id='27' name='sheet (2)' show-title='false' w='82200' x='800' y='10734'>
+                  <layout-cache minwidth='232' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='162' h='84966' id='8' is-fixed='true' param='vert' type-v2='layout-flow' w='16200' x='83000' y='10734'>
+                  <zone h='5200' id='12' mode='compact' param='[Parameters].[参数 2]' type-v2='paramctrl' w='16200' x='83000' y='10734'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='5200' id='11' mode='compact' param='[Parameters].[参数 1]' type-v2='paramctrl' w='16200' x='83000' y='15934'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='7500' id='28' mode='slider' name='sheet (2)' param='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]' show-all='false' type-v2='filter' w='16200' x='83000' y='21134'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='3500' id='14' type-v2='text' w='34600' x='800' y='95700'>
+            <formatted-text>
+              <run bold='true' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='11'>CHALLENGE BY: Smuch</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='3500' id='15' type-v2='text' w='37200' x='35400' y='95700'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>#WOW2025  |  WEEK 17</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='3500' id='16' type-v2='text' w='26600' x='72600' y='95700'>
+            <formatted-text>
+              <run bold='true' fontalignment='2' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>DATA: Kaggle.com</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f3ebf3' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='31' param='vert' type-v2='layout-flow' w='98400' x='800' y='800'>
+                <zone h='9934' id='3' type-v2='text' w='98400' x='800' y='800'>
+                  <formatted-text>
+                    <run fontcolor='#35003d' fontsize='15'>Is </run>
+                    <run bold='true' fontcolor='#35003d' fontsize='15'>&lt;[Parameters].[参数 2]&gt; </run>
+                    <run fontcolor='#35003d' fontsize='15'>the greatest EPL team of all time?</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#35003d'>Select a </run>
+                    <run bold='true' fontcolor='#35003d'>team</run>
+                    <run fontcolor='#35003d'> and a</run>
+                    <run bold='true' fontcolor='#35003d'> measure of performance</run>
+                    <run fontcolor='#35003d'> and scroll through each </run>
+                    <run bold='true' fontcolor='#35003d'>season</run>
+                    <run fontcolor='#35003d'> to see how that team has performed cumulatively over the lifetime of the EPL compared to other teams. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7500' id='28' mode='slider' name='sheet (2)' param='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]' show-all='false' type-v2='filter' w='16200' x='83000' y='21134'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='84966' id='27' is-fixed='true' name='sheet (2)' show-title='false' w='82200' x='800' y='10734'>
+                  <layout-cache minwidth='232' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5200' id='12' mode='compact' param='[Parameters].[参数 2]' type-v2='paramctrl' w='16200' x='83000' y='10734'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5200' id='11' mode='compact' param='[Parameters].[参数 1]' type-v2='paramctrl' w='16200' x='83000' y='15934'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3500' id='14' type-v2='text' w='34600' x='800' y='95700'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='11'>CHALLENGE BY: Smuch</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3500' id='15' type-v2='text' w='37200' x='35400' y='95700'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>#WOW2025  |  WEEK 17</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3500' id='16' type-v2='text' w='26600' x='72600' y='95700'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='2' fontcolor='#3e1756' fontname='Tableau Medium' fontsize='10'>DATA: Kaggle.com</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f3ebf3' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B2E7972B-B52A-4A3C-89BD-4FD0DE604B6C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' name='wow-2025-week-17'>
+      <viewpoints>
+        <viewpoint name='sheet'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{F56B38A0-6A9C-446E-8059-0D93F37A172C}' />
+    </window>
+    <window class='dashboard' maximized='true' name='wow-2025-week-17 (Bouns)'>
+      <viewpoints>
+        <viewpoint name='sheet (2)' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{E02FB33B-3C8C-4448-BF33-5B837F9E5E2B}' />
+    </window>
+    <window class='worksheet' hidden='true' name='sheet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]' show-all='false' type='filter' />
+            <card mode='compact' param='[Parameters].[参数 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[参数 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Calculation_1426726290599546885:nk]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Calculation_1426726290604736520:qk]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290596327424:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{97845D5C-B27C-4A6D-A488-900DF379F818}' />
+    </window>
+    <window class='worksheet' hidden='true' name='sheet (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]' show-all='false' type='filter' />
+            <card mode='compact' param='[Parameters].[参数 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[参数 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Calculation_1426726290599546885:nk]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Calculation_1426726290604736520:qk]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Season End Year:ok]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[none:Team:nk]</field>
+            <field>[federated.1scre4e004awue16oxv8w12pscjl].[usr:Calculation_1426726290596327424:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5E3621B4-DC96-4F2B-8DB8-0A4E441FB808}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='wow-2025-week-17' width='192'>
+      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
+      QmCC
+    </thumbnail>
+    <thumbnail height='192' name='wow-2025-week-17 (Bouns)' width='192'>
+      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
+      f2roxgO90/8HRsw3bFjsc7QAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
