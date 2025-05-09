@@ -1,0 +1,8 @@
+2023-07-25, Android app launched
+2023-09-01, Voice conversations introduced (Plus only)
+2023-10-01, DALL·E 3 image generation integrated
+2023-11-01, Voice chat available to free users
+2024-08-01, Free users get limited image generation (2/day)
+2024-09-01, Advanced voice mode (Plus users)
+2025-03-25, GPT-4o image generation launched
+2025-04-15, Image library feature added
